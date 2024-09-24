@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechnung {{ data.invoice_number }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .header img {
+            height: 50px;
+            float: right;
+        }
+        .header h1 {
+            margin-bottom: 5px;
+        }
+        .client-details, .invoice-details {
+            margin-bottom: 20px;
+        }
+        .invoice-details {
+            text-align: right;
+        }
+        .details-table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .details-table td {
+            padding: 5px;
+        }
+        .services {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .services th, .services td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .services th {
+            background-color: #f4f4f4;
+        }
+        .total {
+            text-align: right;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .bank-details {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rechnung</h1>
+            <img src="https://via.placeholder.com/150x50" alt="Logo">
+        </div>
+
+        <div class="client-details">
+            <strong>Rechnung an:</strong><br>
+            {{ data.client_name }}<br>
+            {{ data.client_address }}<br>
+        </div>
+
+        <div class="invoice-details">
+            <table class="details-table">
+                <tr>
+                    <td><strong>Rechnungsnummer:</strong> {{ data.invoice_number }}</td>
+                    <td><strong>Rechnungsdatum:</strong> {{ data.invoice_date }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Leistungsbeschreibung:</h3>
+        <table class="services">
+            <thead>
+                <tr>
+                    <th>Beschreibung</th>
+                    <th>Betrag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ data.service_types }}</td>
+                    <td>{{ data.amount }} €</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="total">
+            <strong>Gesamtbetrag: {{ data.amount }} €</strong>
+        </div>
+
+        <div class="bank-details">
+            <p>
+                <strong>Bankverbindung:</strong><br>
+                Lukas Oliver Lamberz<br>
+                IBAN: {{ data.my_iban }}<br>
+                Bank: {{ data.my_bank }}<br>
+                Adresse: {{ data.my_address }}<br>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Vielen Dank für Ihren Auftrag!</p>
+        </div>
+    </div>
+</body>
+</html>

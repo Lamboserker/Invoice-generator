@@ -46,10 +46,10 @@ def generate_invoice():
         'amount': amount,
         'invoice_number': invoice_number,
         'invoice_date': datetime.now().strftime("%d.%m.%Y"),
-        'my_name': 'Lukas Oliver Lamberz',
-        'my_address': 'Am Steinberg 68, 51643 Gummersbach',
-        'my_iban': 'DE55384500001000135630',
-        'my_bank': 'Sparkasse Gummersbach'
+        'my_name': 'Max Mustermann',
+        'my_address': 'Musterstraße 1',
+        'my_iban': 'DE123400000000000000000',
+        'my_bank': 'Sparkasse Berlin'
     }
     print(service_types)
     # Rechnung als HTML rendern

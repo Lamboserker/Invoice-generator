@@ -16,6 +16,7 @@ Ein einfacher Rechnungs-Generator, der mit Flask und WeasyPrint entwickelt wurde
 - Flask
 - WeasyPrint
 - HTML/CSS
+- Google Places API
 
 ## Installation
 
@@ -63,6 +64,14 @@ Stelle sicher, dass du Python 3.x und pip installiert hast.
    - Art der IT-Dienstleistung (Mehrfachauswahl möglich)
    - Betrag (in Euro)
 3. Klicke auf "Rechnung erstellen", um die Rechnung als PDF herunterzuladen.
+
+## Google Places API
+
+   Um die Google Places API für die Adressautovervollständigung zu nutzen, musst du einen API-Schlüssel erstellen. Füge deinen API-Schlüssel in den Skript-Tag der index.html ein:
+
+     ```bash
+   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>```
+Ersetze YOUR_API_KEY durch deinen tatsächlichen API-Schlüssel.
 
 ## Lizenz
 

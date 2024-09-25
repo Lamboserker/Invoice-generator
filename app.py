@@ -87,19 +87,18 @@ def list_invoices(amount=None):
             month_path = os.path.join(year_path, month)
             for invoice in os.listdir(month_path):
                 invoice_number = invoice.split('.')[0]  # Rechnungsnummer ohne Dateiendung
-                # Hier das Datumsteil extrahieren, indem du zuerst das erste '_' trennst
-                date_str = invoice_number.split('_')[1]  # '20240925-IT-IT-LUK773'
-                # Dann nur das erste Teil bis zum '-' nehmen
-                date_str = date_str.split('-')[0]  # '20240925'
+             
+                date_str = invoice_number.split('_')[1] 
+                date_str = date_str.split('-')[0]  
 
                 invoice_date = datetime.strptime(date_str, '%Y%m%d').strftime('%d.%m.%Y')
 
                 invoice_files.append({
-                    'path': os.path.join(year, month, invoice),  # Hier wird der relative Pfad zur Datei verwendet
+                    'path': os.path.join(year, month, invoice), 
                     'name': invoice,
-                    'invoice_number': invoice_number,  # Rechnungsnummer hinzufügen
-                    'invoice_date': invoice_date,  # Datum hinzufügen
-                    'amount': amount  # Hier kannst du den Betrag hinzufügen, falls er benötigt wird
+                    'invoice_number': invoice_number,  
+                    'invoice_date': invoice_date,  
+                    'amount': amount  
                 })
 
     # Rechnungen nach Datum sortieren

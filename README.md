@@ -67,12 +67,12 @@ Stelle sicher, dass du Python 3.x und pip installiert hast.
 
 ## Google Places API
 
-   Um die Google Places API für die Adressautovervollständigung zu nutzen, musst du einen API-Schlüssel erstellen. Füge deinen API-Schlüssel in den Skript-Tag der index.html ein:
+Um die Google Places API zu nutzen, musst du einen API-Schlüssel erstellen und ihn in den HTML-Dateien einfügen, wo die Google Maps Bibliothek eingebunden wird. Du kannst deinen API-Schlüssel hier anfordern: [Google Cloud Platform](https://cloud.google.com/maps-platform/).
 
-     ``` 
-     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
-     ```
-Ersetze YOUR_API_KEY durch deinen tatsächlichen API-Schlüssel.
+Füge den API-Schlüssel in die folgende Zeile ein:
+```html
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
+```
 
 ## Lizenz
 

@@ -1,16 +1,17 @@
-# Rechnungs-Generator
 
-Ein einfacher Rechnungs-Generator, der mit Flask und WeasyPrint entwickelt wurde. Diese Anwendung ermöglicht es Benutzern, Rechnungen für IT-Dienstleistungen zu erstellen und als PDF herunterzuladen.
+# Invoice Generator
 
-## Funktionen
+A simple invoice generator developed with Flask and WeasyPrint. This application allows users to create invoices for IT services and download them as PDFs.
 
-- Eingabe von Kundendaten (Name und Adresse)
-- Auswahl mehrerer IT-Dienstleistungen
-- Automatische Generierung einer Rechnungsnummer
-- PDF-Generierung der Rechnung
-- Download der Rechnung im PDF-Format
+## Features
 
-## Technologien
+- Input customer data (name and address)
+- Select multiple IT services
+- Automatic generation of an invoice number
+- PDF generation of the invoice
+- Download the invoice in PDF format
+
+## Technologies
 
 - Python
 - Flask
@@ -20,61 +21,61 @@ Ein einfacher Rechnungs-Generator, der mit Flask und WeasyPrint entwickelt wurde
 
 ## Installation
 
-### Voraussetzungen
+### Prerequisites
 
-Stelle sicher, dass du Python 3.x und pip installiert hast. 
+Ensure you have Python 3.x and pip installed.
 
-### Schritt-für-Schritt-Anleitung
+### Step-by-step Guide
 
-1. **Repository klonen:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/Lamboserker/PosServer.git
    cd PosServer
    ```
 
-2. **Virtuelle Umgebung erstellen (optional):**
+2. **Create a virtual environment (optional):**
 
    ```bash
    python -m venv venv
-   source venv/bin/activate  # Auf macOS/Linux
-   venv\Scripts\activate     # Auf Windows
+   source venv/bin/activate  # On macOS/Linux
+   venv\Scripts\activate     # On Windows
    ```
 
-3. **Abhängigkeiten installieren:**
+3. **Install dependencies:**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Flask-Anwendung ausführen:**
+4. **Run the Flask application:**
 
    ```bash
    python app.py
    ```
 
-   Die Anwendung sollte nun auf `http://127.0.0.1:5000/` laufen.
+   The application should now be running at `http://127.0.0.1:5000/`.
 
-## Verwendung
+## Usage
 
-1. Öffne deinen Webbrowser und gehe zu `http://127.0.0.1:5000/`.
-2. Gib die erforderlichen Informationen ein:
-   - Name des Auftraggebers
-   - Adresse des Auftraggebers
-   - Art der IT-Dienstleistung (Mehrfachauswahl möglich)
-   - Betrag (in Euro)
-3. Klicke auf "Rechnung erstellen", um die Rechnung als PDF herunterzuladen.
+1. Open your web browser and go to `http://127.0.0.1:5000/`.
+2. Enter the required information:
+   - Client's name
+   - Client's address
+   - Type of IT service (multiple selections possible)
+   - Amount (in Euros)
+3. Click on "Create Invoice" to download the invoice as a PDF.
 
 ## Google Places API
 
-Um die Google Places API zu nutzen, musst du einen API-Schlüssel erstellen und ihn in den HTML-Dateien einfügen, wo die Google Maps Bibliothek eingebunden wird. Du kannst deinen API-Schlüssel hier anfordern: [Google Cloud Platform](https://cloud.google.com/maps-platform/).
+To use the Google Places API, you need to create an API key and insert it into the HTML files where the Google Maps library is included. You can request your API key here: [Google Cloud Platform](https://cloud.google.com/maps-platform/).
 
-Füge den API-Schlüssel in die folgende Zeile ein:
+Insert the API key in the following line:
 ```html
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
 ```
 
-## Autor
+## Author
 
 Lukas Oliver Lamberz  
-[GitHub-Profil](https://github.com/Lamboserker)
+[GitHub Profile](https://github.com/Lamboserker)

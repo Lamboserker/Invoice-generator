@@ -74,10 +74,6 @@ Füge den API-Schlüssel in die folgende Zeile ein:
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
 ```
 
-## Lizenz
-
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die [LICENSE](LICENSE) Datei für Details.
-
 ## Autor
 
 Lukas Oliver Lamberz  
